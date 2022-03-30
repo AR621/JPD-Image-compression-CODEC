@@ -8,7 +8,7 @@ My own (lossy) image compression format written in MATLAB
 2. Wavelet transform - biorthogonal 4.4 wavelet transform
 3. Tresholding and quantization
 4. transforming three image matrices and dimension info into one dimensional vector for encoding
-5. counting zeros and changing them for "nx" notation where n is the number of zeros counted*
+5. counting zeros and changing them for "nx" notation where n is the number of zeros counted (*)
 6. Huffman encoding of the transformed vector
 7. storage
 ## Decoding
@@ -17,7 +17,7 @@ My own (lossy) image compression format written in MATLAB
 3. Reverse wavelet transform
 4. YCbCr to RGB color conversion
 
-* this step is done here since wavelet transform usually leaves way more zeros in our vector than any other values, this step allows us to further reduce the size of compressed image 
+(*) this step is done here since wavelet transform usually leaves way more zeros in our vector than any other values, this step allows us to further reduce the size of compressed image 
 
 # Example results
 ## YCbCr conversion to and back to rgb example:
