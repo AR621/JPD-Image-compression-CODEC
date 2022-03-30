@@ -1,9 +1,9 @@
-## JPD-Image-compression-CODEC
-My own image compression format written in MATLAB
+# JPD-Image-compression-CODEC
+My own (lossy) image compression format written in MATLAB
 
-## Compression format image compression idea
+# Compression format image compression idea
 
-# Encoding
+## Encoding
 1. RGB to YCbCr color conversion
 2. Wavelet transform - biorthogonal 4.4 wavelet transform
 3. Tresholding and quantization
@@ -11,7 +11,7 @@ My own image compression format written in MATLAB
 5. counting zeros and changing them for "nx" notation where n is the number of zeros counted*
 6. Huffman encoding of the transformed vector
 7. storage
-# Decoding
+## Decoding
 1. Huffman decoding
 2. Transforming one dimensional vector back into dimension info and Y, Cb, Cr matrices
 3. Reverse wavelet transform
@@ -19,21 +19,25 @@ My own image compression format written in MATLAB
 
 * this step is done here since wavelet transform usually leaves way more zeros in our vector than any other values, this step allows us to further reduce the size of compressed image 
 
-## Example results
-# YCbCr conversion to and back to rgb example
+# Example results
+## YCbCr conversion to and back to rgb example
 
 ![webpage example image](
 https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/YCbCr_tigro.PNG?raw=true  "YCbCr example")
 
-# compression results
+## compression results
+
+### higher quality - smaller compression
 ![webpage example image](
 https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/tiger_T80_n100.PNG?raw=true  "result example 1")
 
 ![webpage example image](
-https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/tiger_lowest.PNG?raw=true  "result example 2")
+https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/wiosna_0.75_T45_n71.PNG  "result example 3")
+
+### lower quality - bigger compression 
 
 ![webpage example image](
-https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/wiosna_0.75_T45_n71.PNG  "result example 3")
+https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/tiger_lowest.PNG?raw=true  "result example 2")
 
 ![webpage example image](
 https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/wiosna_0.25.PNG  "result example 4")
