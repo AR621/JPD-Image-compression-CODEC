@@ -1,7 +1,7 @@
 # JPD-Image-compression-CODEC
 My own (lossy) image compression format written in MATLAB
 
-# Compression format image compression idea
+# Idea behind this compression format
 
 ## Encoding
 1. RGB to YCbCr color conversion
@@ -20,21 +20,21 @@ My own (lossy) image compression format written in MATLAB
 * this step is done here since wavelet transform usually leaves way more zeros in our vector than any other values, this step allows us to further reduce the size of compressed image 
 
 # Example results
-## YCbCr conversion to and back to rgb example
+## YCbCr conversion to and back to rgb example:
 
 ![webpage example image](
 https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/YCbCr_tigro.PNG?raw=true  "YCbCr example")
 
 ## compression results
 
-### higher quality - smaller compression
+### higher quality - smaller compression:
 ![webpage example image](
 https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/tiger_T80_n100.PNG?raw=true  "result example 1")
 
 ![webpage example image](
 https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/wiosna_0.75_T45_n71.PNG  "result example 3")
 
-### lower quality - bigger compression 
+### lower quality - bigger compression:
 
 ![webpage example image](
 https://github.com/AR621/JPD-Image-compression-CODEC/blob/main/results/tiger_lowest.PNG?raw=true  "result example 2")
